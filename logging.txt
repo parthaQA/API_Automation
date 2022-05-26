@@ -1,0 +1,21 @@
+Request method:	PUT
+Request URI:	https://shopper-journey-test-support-tool-api.shoppertrak.com/sites/visits
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZmOGUxY2IxNTY0MTQ2M2M2ZGYwZjMzMzk0YjAzYzkyZmNjODg5YWMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoidGVzdF9WbGFkaW1pciIsImFwcHMiOlsib3BzdG9vbGtpdCJdLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY29tbW9uLXNzby10ZXN0IiwiYXVkIjoiY29tbW9uLXNzby10ZXN0IiwiYXV0aF90aW1lIjoxNjUzNTY2OTU2LCJ1c2VyX2lkIjoidGVzdF9WbGFkaW1pciIsInN1YiI6InRlc3RfVmxhZGltaXIiLCJpYXQiOjE2NTM1NjY5NTYsImV4cCI6MTY1MzU3MDU1NiwiZW1haWwiOiJzc28udGVzdDQ0MDdAc2hvcHBlcnRyYWsuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInNzby50ZXN0NDQwN0BzaG9wcGVydHJhay5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInRlbmFudCI6InNzby10ZXN0LW5ld1RlbmFudC1udWxxZCJ9fQ.yVvKRN0rVQ-fgfnbbi-QA8zT14_uwzz_HKA9h2JdRMJ91oyTIy4uOwbltW9Yd7UtejPbk6jLDexLyFDMGdeClL1blWsc4xMbdiaHLfKYLSShzdrXXs-9I3bb-2iOfnyuaskBGuqyND1eFZb0lcEnLCQLTzC43_-oAQHRmNrDQzD1SWEYo2-8_dCm2hfqY2YW6xcxfYktFvgUEuVfgRZiu0EJhb7RQUMfDAGAtVebqLEUG9c7sxEe61bq2K7rRgHQcIFPkRGMY4qQ0LB_8oIOOzvp7Q6ahgyZ1myQ5SzIfeOjbe0eaUKE1ruLNRH7Q-nmDr_Apl2lnFJCoEo2G3UA1g
+				tenant=sso-test-newTenant-nulqd
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "siteId": "00000000",
+    "startDate": "2022-05-04",
+    "endDate": "2022-05-04",
+    "comment": "test_partha1",
+    "user": "ssotestotkten"
+}
