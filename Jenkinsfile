@@ -6,14 +6,14 @@ pipeline {
 
             steps {
 
-                    sh 'mvn clean compile'
+                    sh 'mvn clean'
             }
         }
 
         stage ('Testing Stage') {
 
             steps {
-                    sh 'mvn verify -DsuiteXmlFiles=testng.xml'
+                    sh 'mvn verify'
             }
         }
 
