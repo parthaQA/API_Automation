@@ -23,8 +23,9 @@ pipeline {
                 bat "mvn verify -DXmlFile=testng.xml"
                 }
             }
-
-            stage ('Cucumber Reports') {
+            post {
+                always {
+                    stage ('Cucumber Reports') {
 
                         steps {
                             cucumber buildStatus: "UNSTABLE",
