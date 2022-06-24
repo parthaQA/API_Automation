@@ -12,16 +12,27 @@ pipeline {
             steps {
 
                 // To run Maven on a Windows agent, use
-                bat "mvn clean verify -DXmlFile=testng.xml"
+                bat "mvn clean"
             }
 
-            post {
-                success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
+        stage('Test') {
+            steps {
+
+                    // To run Maven on a Windows agent, use
+                bat "mvn verify -DXmlFile=testng.xml"
                 }
             }
-        }
+
+            stage ('Cucumber Reports') {
+
+                        steps {
+                            cucumber buildStatus: "UNSTABLE",
+                                fileIncludePattern: "**/cucumber.json",
+                                jsonReportDirectory: 'target'
+
+                        }
+
+                    }
     }
 }
 
