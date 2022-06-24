@@ -13,7 +13,7 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                    bat 'mvn verify'
+                    bat 'mvn verify -DsuiteXmlFile=testng.xml'
             }
         }
 
