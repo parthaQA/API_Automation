@@ -5,18 +5,15 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                withMaven(maven : 'maven_3_8_5') {
-                    bat 'mvn clean compile'
-                }
+
+                    sh 'mvn clean compile'
             }
         }
 
         stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'maven_3_8_5') {
-                    bat 'mvn verify -DXmlFile=testng.xml'
-                }
+                    sh 'mvn verify -DXmlFile=testng.xml'
             }
         }
 
