@@ -13,17 +13,9 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                    sh 'mvn verify -DXmlFile=testng.xml'
+                    sh 'mvn verify -DsuiteXmlFiles=testng.xml'
             }
         }
 
-
-        stage ('Cucumber report') {
-            steps {
-                cucumber buildStatus: "UNSTABLE",
-                    fileIncludePattern: "**/cucumber.json",
-                    jsonReportDirectory: 'target'
-                }
-            }
         }
     }
