@@ -23,15 +23,14 @@ pipeline {
                 bat "mvn verify -DXmlFile=testng.xml"
                 }
             }
-        stage('Cucumber report') {
-            post {
-                always {
+         }
+         post {
+                 always {
+
                             cucumber buildStatus: "UNSTABLE",
                                 fileIncludePattern: "**/cucumber.json",
                                 jsonReportDirectory: 'target'
                  }
             }
          }
-    }
-}
 
