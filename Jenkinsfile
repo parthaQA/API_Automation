@@ -1,21 +1,27 @@
 pipeline {
     agent any
 
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "MAVEN_HOME"
+        jdk "Java_Home"
+    }
+
     stages {
-        stage ('Compile Stage') {
-
+        stage('Build') {
             steps {
 
-                    bat 'mvn clean'
+                // To run Maven on a Windows agent, use
+                bat "mvn clean verify -DXmlFile=testng.xml"
             }
-        }
 
-        stage ('Testing Stage') {
-
-            steps {
-                    bat 'mvn verify -DsuiteXmlFile=testng.xml'
+            post {
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
             }
-        }
-
         }
     }
+}
+
